@@ -1,0 +1,107 @@
+version: 2
+
+sources:
+  - name: tpch
+    database: SNOWFLAKE_SAMPLE_DATA
+    schema: TPCH_SF1
+    description: "TPC-H Sample Dataset in Snowflake — Supply Chain benchmark data"
+    tables:
+      - name: ORDERS
+        description: "Contains all order information including customer keys, order dates and shipping details"
+        columns:
+          - name: O_ORDERKEY
+            description: "Primary key for orders table"
+          - name: O_CUSTKEY
+            description: "Foreign key to customer table"
+          - name: O_ORDERSTATUS
+            description: "Current status of the order"
+          - name: O_TOTALPRICE
+            description: "Total price of the order including tax and discount"
+          - name: O_ORDERDATE
+            description: "Date when the order was placed"
+          - name: O_ORDERPRIORITY
+            description: "Priority level of the order"
+          - name: O_CLERK
+            description: "ID of clerk who processed the order"
+          - name: O_SHIPPRIORITY
+            description: "Shipping priority of the order"
+          - name: O_COMMENT
+            description: "Additional order comments"
+
+      - name: CUSTOMER
+        description: "Customer master data including market segment and account balance"
+        columns:
+          - name: C_CUSTKEY
+            description: "Primary key for customer table"
+          - name: C_NAME
+            description: "Customer name"
+          - name: C_ADDRESS
+            description: "Customer street address"
+          - name: C_NATIONKEY
+            description: "Foreign key to nation table"
+          - name: C_PHONE
+            description: "Customer phone number"
+          - name: C_ACCTBAL
+            description: "Customer account balance"
+          - name: C_MKTSEGMENT
+            description: "Market segment the customer belongs to"
+          - name: C_COMMENT
+            description: "Additional customer comments"
+
+      - name: NATION
+        description: "Nation reference data"
+        columns:
+          - name: N_NATIONKEY
+            description: "Primary key for nation table"
+          - name: N_NAME
+            description: "Nation name"
+          - name: N_REGIONKEY
+            description: "Foreign key to region table"
+          - name: N_COMMENT
+            description: "Additional nation comments"
+
+      - name: LINEITEM
+        description: "Order line items — central fact table with 6M+ rows"
+        columns:
+          - name: L_ORDERKEY
+            description: "Foreign key to orders table"
+          - name: L_PARTKEY
+            description: "Foreign key to part table"
+          - name: L_SUPPKEY
+            description: "Foreign key to supplier table"
+          - name: L_LINENUMBER
+            description: "Line item sequence number within order"
+          - name: L_QUANTITY
+            description: "Quantity ordered"
+          - name: L_EXTENDEDPRICE
+            description: "Line item extended price before discount"
+          - name: L_DISCOUNT
+            description: "Discount percentage applied"
+          - name: L_TAX
+            description: "Tax percentage applied"
+          - name: L_RETURNFLAG
+            description: "Return status flag"
+          - name: L_LINESTATUS
+            description: "Line item status"
+          - name: L_SHIPDATE
+            description: "Date when item was shipped"
+          - name: L_COMMITDATE
+            description: "Date when item was committed for shipping"
+          - name: L_RECEIPTDATE
+            description: "Date when item was received"
+          - name: L_SHIPINSTRUCT
+            description: "Shipping instructions"
+          - name: L_SHIPMODE
+            description: "Shipping mode"
+          - name: L_COMMENT
+            description: "Additional line item comments"
+
+      - name: REGION
+        description: "Region reference data"
+        columns:
+          - name: R_REGIONKEY
+            description: "Primary key for region table"
+          - name: R_NAME
+            description: "Region name"
+          - name: R_COMMENT
+            description: "Additional region comments"
