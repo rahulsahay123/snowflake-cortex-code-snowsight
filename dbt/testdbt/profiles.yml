@@ -1,0 +1,12 @@
+testdbt:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: YOUR_ACCOUNT_IDENTIFIER   # Replace with output of SELECT CURRENT_ACCOUNT()
+      authenticator: oauth
+      role: ACCOUNTADMIN
+      database: DBT_TPCH_ANALYTICS
+      warehouse: COMPUTE_WH
+      schema: PUBLIC
+      threads: 4
