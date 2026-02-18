@@ -1,0 +1,27 @@
+# dbt_project.yml
+name: testdbt
+version: 1.0.0
+profile: testdbt
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+analysis-paths: ["analysis"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+vars:
+  source_database: SNOWFLAKE_SAMPLE_DATA
+
+models:
+  testdbt:
+    staging:
+      +materialized: view
+    intermediate:
+      +materialized: view
+    mart:
+      +materialized: table
