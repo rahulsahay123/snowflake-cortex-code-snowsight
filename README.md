@@ -215,7 +215,7 @@ Scoped prompts produce better output than multi-task prompts.
 ## 🤝 Connect
 
 **Author:** Rahul Sahay
-**LinkedIn:** [linkedin.com/in/rahulsahay](#)
+**LinkedIn:** [[linkedin.com/in/rahulsahay](#)](https://www.linkedin.com/in/rahul-sahay-8573923/)
 **GitHub:** [github.com/rahulsahay123](https://github.com/rahulsahay123)
 
 ---
