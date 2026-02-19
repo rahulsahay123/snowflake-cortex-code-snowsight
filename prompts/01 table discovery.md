@@ -4,7 +4,7 @@
 Discover all tables and row counts in the schema.
 
 ## 💬 Prompt
-> *"How many tables are in the TPCH_SF1 schema? Show me the record count for each table in a single query, ordered by row count descending."*
+> *"How many tables are in the TPCH_SF1 schema? Show me the record count for each table in a single query, ordered by row count descending"*
 
 ## ✅ Expected SQL
 ```sql
